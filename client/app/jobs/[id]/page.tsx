@@ -238,13 +238,15 @@ export default function JobDetailsPage() {
                   <DialogTrigger asChild>
                     <Button
                       className="w-full"
-                      disabled={applied || user?.role === "employer" || job.status === "closed"}
+                      disabled={!user || applied || user?.role === "employer" || job.status === "closed"}
                     >
                       {job.status === "closed"
                         ? "This position is closed"
                         : user?.role === "employer"
                           ? "Employers cannot apply"
-                          : "Apply for this job"}
+                          : !user
+                            ? "Login to apply"
+                            : "Apply for this job"}
                     </Button>
                   </DialogTrigger>
                   <DialogContent>
