@@ -2,6 +2,8 @@
 
 This repository contains a **Next.js frontend (client)** and a **Node.js backend (server)**.
 
+## Demo Video: https://youtu.be/ljjoKwz0eK4 
+
 ## Prerequisites
 Ensure you have the following installed:
 - [Node.js](https://nodejs.org/)
