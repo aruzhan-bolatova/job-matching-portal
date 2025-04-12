@@ -70,3 +70,8 @@ For backend API endpoints, refer to the `server/routes` folder.
 - If you're using a database, ensure it's running before starting the backend.
 
 
+## For dashboard, run:
+```sh
+pip install streamlit plotly
+streamlit run dashboard.py
+````
