@@ -70,13 +70,17 @@ For backend API endpoints, refer to the `server/routes` folder.
 - If you're using a database, ensure it's running before starting the backend.
 
 
-## For dashboard, run:
+## For dashboard
+1. create virtual environemtn
+2. run:
 ```sh
 pip install streamlit plotly
 streamlit run dashboard.py
 ```
 
-## For chatbot, run:
+## For chatbot
+1. create virtual environemtn
+2. run:
 ```sh
 streamlit run chatbot_app.py
 ```

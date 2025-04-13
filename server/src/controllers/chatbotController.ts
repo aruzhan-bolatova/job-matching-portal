@@ -22,7 +22,7 @@ export const chatWithGemini = async (req: Request, res: Response): Promise<void>
             `- ${job.title} at ${job.company} (${job.location})`
         ).join("\n");
 
-        console.log("Job List:", jobList);
+        // console.log("Job List:", jobList);
 
         // Construct context message for Gemini
         const systemPrompt = `You are a helpful job recommendation assistant for an online job portal.
@@ -44,7 +44,7 @@ export const chatWithGemini = async (req: Request, res: Response): Promise<void>
 
         const aiReply = response.text;
         res.status(200).json({ reply: aiReply });
-        console.log("Gemini Response:", aiReply);
+        // console.log("Gemini Response:", aiReply);
 
     } catch (error: any) {
         console.error("Gemini API Error:", error.message || error.response?.data);

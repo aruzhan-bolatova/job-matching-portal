@@ -59,11 +59,24 @@ export default function JobAssistantChat() {
     }
   };
 
+  const handleReset = () => {
+    const welcome = [
+      {
+        role: "assistant",
+        content: "Welcome back! What kind of job or application help do you need today?",
+      },
+    ];
+    setMessages(welcome);
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("jobAssistantMessages", JSON.stringify(welcome));
+    }
+  };
+
   if (!isExpanded) {
     return (
       <button
         onClick={() => setIsExpanded(true)}
-        className="fixed bottom-6 right-6 w-12 h-12 bg-white text-white rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-all z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gray-700 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-all z-50"
       >
         💬
       </button>
@@ -114,7 +127,7 @@ export default function JobAssistantChat() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask me about jobs..."
-            className="flex-1 p-2.5 rounded-lg border border-gray-300 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black"
+            className="flex-1 p-2.5 rounded-lg border border-gray-300 text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black"
           />
           <button
             type="submit"
