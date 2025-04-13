@@ -74,4 +74,9 @@ For backend API endpoints, refer to the `server/routes` folder.
 ```sh
 pip install streamlit plotly
 streamlit run dashboard.py
-````
+```
+
+## For chatbot, run:
+```sh
+streamlit run chatbot_app.py
+```

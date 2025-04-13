@@ -8,6 +8,8 @@ import authRoutes from './routes/authRoutes';
 import applicationRoutes from './routes/applicationRoutes';
 import jobRoutes from './routes/jobRoutes';
 import userRoutes from './routes/userRoutes';
+import chatbotRoutes from './routes/chatbotRoutes';
+
 
 
 // Load environment variables
@@ -40,6 +42,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/applications', applicationRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/users', userRoutes);
+app.use("/api/chatbot", chatbotRoutes);
 
 // Error handler middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

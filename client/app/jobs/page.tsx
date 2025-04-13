@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Building, MapPin, Search, DollarSign } from "lucide-react"
 import { useToast } from "@/components/ui/use-toast"
 import { getJobs, type Job } from "../api-service"
+import Chatbot from "@/components/Chatbot";
 
 export default function JobsPage() {
   const [jobs, setJobs] = useState<Job[]>([])
@@ -215,6 +216,7 @@ export default function JobsPage() {
           ))}
         </div>
       )}
+      <Chatbot />
     </div>
   )
 }
